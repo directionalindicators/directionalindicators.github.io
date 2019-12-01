@@ -17,6 +17,11 @@ var indicatorCounts = [0, 0, 0,0]
 function performAnalysis() {
     let rawContent = window.sessionStorage.getItem("rawContent")
 
+    if (rawContent == null) {
+        window.location.replace("https://directionalindicators.github.io/")
+        return
+    }
+
     let updatedContent = "<p>"
     
     additives.forEach(function(item, index) {
