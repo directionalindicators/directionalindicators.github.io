@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>
+        Text Analysis
+    </title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+
+    <link href="index.css" rel="stylesheet">
+
+    <script src="./js/primary.js"></script>
+</head>
+
+<body>
+    <main role="main" class="container">
+        <h1 class="mt-5">Text Analysis</h1>
+        <p class="lead">A tool to quantitatively evaluate writing.</p>
+
+        <form onsubmit="return validateText()">
+            <!-- <textarea class="form-control" id="topicContent" rows="1" placeholder="Topic (Optional)"></textarea> -->
+            <textarea class="form-control" id="textContent" rows="5" placeholder="Enter some text" required></textarea>
+            <button type="submit" class="btn btn-primary mb-2">Analyze!</button>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <span class="text-muted">Created for Dr. Mullen's ENGL 1102 course @ <a href="http://gatech.edu/">Georgia Tech</a>.</span>
+        </div>
+    </footer>
+</body>
