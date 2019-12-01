@@ -1,6 +1,8 @@
 // https://www.smart-words.org/linking-words/transition-words.html
 
 const additiveColor = "#ed6f68"
+const blandAdditiveColor = "#eb948f"
+const flavorfulAdditiveColor = "#e34d44"
 const blandAdditives = [
     ", and", "in addition", "additionally", "also", "or"
  ]
@@ -13,6 +15,8 @@ const blandAdditives = [
 ]
 
 const sequentialColor = "#e89623"
+const blandSequentialColor = "#f7bf6f"
+const flavorfulSequentialColor = "#f7960a"
 const blandSequential = [
     "firstly", "lastly", "next", "then", "after", "later", "now", "finally"
 ]
@@ -22,6 +26,8 @@ const flavorfulSequential = [
 ]
 
 const causalColor = "#2de07e"
+const blandCausalColor = "#83ebb2"
+const flavorfulCausalColor = "#04cf60"
 const blandCausal = [
     "consequently", "because", "since", "due to", "as a result",
     "for this reason" 
@@ -32,6 +38,8 @@ const flavorfulCausal = [
 ]
 
 const oppositionalColor = "#39a8db"
+const blandOppositionalColor = "#7acef5"
+const flavorfulOppositionalColor = "#099ce0"
 const blandOppositional = [
     "in contrast", "but", "however", "yet", "although", "even though", "while",
     "whereas"
