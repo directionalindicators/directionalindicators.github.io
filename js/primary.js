@@ -12,7 +12,7 @@ function validateText() {
     return false
 }
 
-var indicatorCounts = [0, 0, 0,0]
+var indicatorCounts = [[0, 0], [0, 0], [0, 0], [0, 0]]
 
 function performAnalysis() {
     let rawContent = window.sessionStorage.getItem("rawContent")
@@ -24,30 +24,49 @@ function performAnalysis() {
 
     let updatedContent = "<p>"
     
-    additives.forEach(function(item, index) {
-        rawContent = rawContent.replace(new RegExp("\\b(" + item + ")\\b", "gi"), highlightWord("$1", additiveColor))
+    blandAdditives.forEach(function(item, index) {
+        rawContent = rawContent.replace(new RegExp("\\b(" + item + ")\\b", "gi"), highlightWord("$1", blandAdditiveColor))
+    })
+    flavorfulAdditives.forEach(function(item, index) {
+        rawContent = rawContent.replace(new RegExp("\\b(" + item + ")\\b", "gi"), highlightWord("$1", flavorfulAdditiveColor))
     })
     
-    sequential.forEach(function(item, index) {
-        rawContent = rawContent.replace(new RegExp("\\b(" + item + ")\\b", "gi"), highlightWord("$1", sequentialColor))
+    blandSequential.forEach(function(item, index) {
+        rawContent = rawContent.replace(new RegExp("\\b(" + item + ")\\b", "gi"), highlightWord("$1", blandSequentialColor))
+    })
+    flavorfulSequential.forEach(function(item, index) {
+        rawContent = rawContent.replace(new RegExp("\\b(" + item + ")\\b", "gi"), highlightWord("$1", flavorfulSequentialColor))
     })
 
-    causal.forEach(function(item, index) {
-        rawContent = rawContent.replace(new RegExp("\\b(" + item + ")\\b", "gi"), highlightWord("$1", causalColor))
+    blandCausal.forEach(function(item, index) {
+        rawContent = rawContent.replace(new RegExp("\\b(" + item + ")\\b", "gi"), highlightWord("$1", blandCausalColor))
+    })
+    flavorfulCausal.forEach(function(item, index) {
+        rawContent = rawContent.replace(new RegExp("\\b(" + item + ")\\b", "gi"), highlightWord("$1", flavorfulCausalColor))
     })
 
-    oppositional.forEach(function(item, index) {
-        rawContent = rawContent.replace(new RegExp("\\b(" + item + ")\\b", "gi"), highlightWord("$1", oppositionalColor))
+    blandOppositional.forEach(function(item, index) {
+        rawContent = rawContent.replace(new RegExp("\\b(" + item + ")\\b", "gi"), highlightWord("$1", blandOppositionalColor))
+    })
+    flavorfulOppositional.forEach(function(item, index) {
+        rawContent = rawContent.replace(new RegExp("\\b(" + item + ")\\b", "gi"), highlightWord("$1", flavorfulOppositionalColor))
     })
 
     updatedContent += rawContent
     
     updatedContent += "</p>"
 
-    indicatorCounts[0] = (updatedContent.match(new RegExp(additiveColor, "g")) || []).length
-    indicatorCounts[1] = (updatedContent.match(new RegExp(sequentialColor, "g")) || []).length
-    indicatorCounts[2] = (updatedContent.match(new RegExp(causalColor, "g")) || []).length
-    indicatorCounts[3] = (updatedContent.match(new RegExp(oppositionalColor, "g")) || []).length
+    indicatorCounts[0][0] = (updatedContent.match(new RegExp(blandAdditiveColor, "g")) || []).length
+    indicatorCounts[0][1] = (updatedContent.match(new RegExp(flavorfulAdditiveColor, "g")) || []).length
+
+    indicatorCounts[1][0] = (updatedContent.match(new RegExp(blandSequentialColor, "g")) || []).length
+    indicatorCounts[1][1] = (updatedContent.match(new RegExp(flavorfulSequentialColor, "g")) || []).length
+
+    indicatorCounts[2][0] = (updatedContent.match(new RegExp(blandCausalColor, "g")) || []).length
+    indicatorCounts[2][1] = (updatedContent.match(new RegExp(flavorfulCausalColor, "g")) || []).length
+
+    indicatorCounts[3][0] = (updatedContent.match(new RegExp(blandOppositionalColor, "g")) || []).length
+    indicatorCounts[3][1] = (updatedContent.match(new RegExp(flavorfulOppositionalColor, "g")) || []).length
 
     document.getElementById("content").innerHTML = updatedContent
 }
