@@ -70,11 +70,9 @@ span {
     }
 }
 
-<<<<<<< HEAD
-.bottom-half {
+#bottom-half {
     background-color: white;
-=======
+}
 .image-right {
     float: right;
->>>>>>> 6a94170c088e0f5a0410daf9bedee97aa4274dc6
 }
