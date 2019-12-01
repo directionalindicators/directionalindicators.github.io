@@ -25,31 +25,31 @@ function performAnalysis() {
     let updatedContent = "<p>"
     
     blandAdditives.forEach(function(item, index) {
-        rawContent = rawContent.replace(new RegExp("\\b(" + item + ")\\b", "gi"), highlightWord("$1", blandAdditiveColor))
+        rawContent = rawContent.replace(new RegExp("\\b(" + item + ")\\b", "gi"), highlightWord("$1", blandAdditiveColor, "Bland Additive"))
     })
     flavorfulAdditives.forEach(function(item, index) {
-        rawContent = rawContent.replace(new RegExp("\\b(" + item + ")\\b", "gi"), highlightWord("$1", flavorfulAdditiveColor))
+        rawContent = rawContent.replace(new RegExp("\\b(" + item + ")\\b", "gi"), highlightWord("$1", flavorfulAdditiveColor, "Flavorful Additive"))
     })
     
     blandSequential.forEach(function(item, index) {
-        rawContent = rawContent.replace(new RegExp("\\b(" + item + ")\\b", "gi"), highlightWord("$1", blandSequentialColor))
+        rawContent = rawContent.replace(new RegExp("\\b(" + item + ")\\b", "gi"), highlightWord("$1", blandSequentialColor, "Bland Sequential"))
     })
     flavorfulSequential.forEach(function(item, index) {
-        rawContent = rawContent.replace(new RegExp("\\b(" + item + ")\\b", "gi"), highlightWord("$1", flavorfulSequentialColor))
+        rawContent = rawContent.replace(new RegExp("\\b(" + item + ")\\b", "gi"), highlightWord("$1", flavorfulSequentialColor, "Flavorful Sequential"))
     })
 
     blandCausal.forEach(function(item, index) {
-        rawContent = rawContent.replace(new RegExp("\\b(" + item + ")\\b", "gi"), highlightWord("$1", blandCausalColor))
+        rawContent = rawContent.replace(new RegExp("\\b(" + item + ")\\b", "gi"), highlightWord("$1", blandCausalColor, "Bland Causal"))
     })
     flavorfulCausal.forEach(function(item, index) {
-        rawContent = rawContent.replace(new RegExp("\\b(" + item + ")\\b", "gi"), highlightWord("$1", flavorfulCausalColor))
+        rawContent = rawContent.replace(new RegExp("\\b(" + item + ")\\b", "gi"), highlightWord("$1", flavorfulCausalColor, "Flavorful Causal"))
     })
 
     blandOppositional.forEach(function(item, index) {
-        rawContent = rawContent.replace(new RegExp("\\b(" + item + ")\\b", "gi"), highlightWord("$1", blandOppositionalColor))
+        rawContent = rawContent.replace(new RegExp("\\b(" + item + ")\\b", "gi"), highlightWord("$1", blandOppositionalColor, "Bland Oppositional"))
     })
     flavorfulOppositional.forEach(function(item, index) {
-        rawContent = rawContent.replace(new RegExp("\\b(" + item + ")\\b", "gi"), highlightWord("$1", flavorfulOppositionalColor))
+        rawContent = rawContent.replace(new RegExp("\\b(" + item + ")\\b", "gi"), highlightWord("$1", flavorfulOppositionalColor, "Flavorful Oppositional"))
     })
 
     updatedContent += rawContent
@@ -71,6 +71,6 @@ function performAnalysis() {
     document.getElementById("content").innerHTML = updatedContent
 }
 
-function highlightWord(word, color) {
-    return "<span style=\"background-color: " + color + "\">" + word + "</span>";
+function highlightWord(word, color, tooltipMsg) {
+    return "<span data-toggle=\"tooltip\" title=\"" + tooltipMsg + "\" style=\"background-color: " + color + "\">" + word + "</span>";
 }
