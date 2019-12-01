@@ -5,6 +5,7 @@ html {
 
 body {
     margin-bottom: 60px;
+    background-color: #ccffff;
 }
 
 span {
@@ -32,6 +33,7 @@ span {
     width: auto;
     max-width: 680px;
     padding: 0 15px;
+    background-color: #add8e6;
 }
 
 .footer .footer-right {
@@ -62,4 +64,8 @@ span {
     .featurette-heading {
         margin-top: 7rem;
     }
+}
+
+.bottom-half {
+    background-color: white;
 }
