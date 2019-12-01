@@ -1,6 +1,8 @@
 // https://www.smart-words.org/linking-words/transition-words.html
 
 const additiveColor = "#ed6f68"
+const blandAdditiveColor = "#ed6f68"
+const flavorfulAdditiveColor = "#ed6f68"
 const blandAdditives = [
     "and", "in addition", "additionally", "also", "furthermore", "as well", "on top of that", 
     "another", "or", "nor", "along with", "similarly", "moreover"
@@ -13,6 +15,8 @@ const blandAdditives = [
 ]
 
 const sequentialColor = "#e89623"
+const blandSequentialColor = "#e89623"
+const flavorfulSequentialColor = "#e89623"
 const blandSequential = [
     "firstly", "lastly", "next", "then", "after", "later", "from time to time",
     "last", "first", "at the same time", "during", "since", "as soon as",
@@ -23,6 +27,8 @@ const flavorfulSequential = [
 ]
 
 const causalColor = "#2de07e"
+const blandCausalColor = "#2de07e"
+const flavorfulCausalColor = "#2de07e"
 const blandCausal = [
     "therefore", "consequently", "because", "thus", "since", "hence", "due to", "as a result",
     "for this reason" 
@@ -33,6 +39,8 @@ const flavorfulCausal = [
 ]
 
 const oppositionalColor = "#39a8db"
+const blandOppositionalColor = "#39a8db"
+const flavorfulOppositionalColor = "#39a8db"
 const blandOppositional = [
     "in contrast", "on the other hand", "but", "despite", "however", "yet", "although", "even though", "while", "conversely", "instead",
     "whereas"
