@@ -22,6 +22,10 @@ span {
     background-color: #f5f5f5;
     padding-left: 10px;
     padding-right: 10px;
+
+        
+    flex: 1;
+    overflow: auto;
 }
 
 .form-control {
@@ -62,4 +66,8 @@ span {
     .featurette-heading {
         margin-top: 7rem;
     }
+}
+
+.image-right {
+    float: right;
 }
