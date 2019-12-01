@@ -41,10 +41,10 @@ const oppositionalColor = "#39a8db"
 const blandOppositionalColor = "#7acef5"
 const flavorfulOppositionalColor = "#099ce0"
 const blandOppositional = [
-    "in contrast", "but", "however", "yet", "although", "even though", "while",
+    "but", "although", "even though", "while", "But",
     "whereas"
 ]
 const flavorfulOppositional = [
     "notwithstanding", "nevertheless", "nonetheless", "rather", "different from", "on the contrary", "in spite of", "even so", "regardless", "then again",
-    "albeit", "above all", "in reality", "despite", "conversely", "instead", "on the other hand"
+    "albeit", "above all", "in reality", "despite", "conversely", "instead", "on the other hand", "in contrast", "however", "yet"
 ]
